@@ -71,7 +71,7 @@
         <figure class="floraAboutImageWrapper">
           <picture>
             <source type="image/webp" srcset="./images/about@X1.webp 1x, ./images/about@X2.webp 2x">
-            <img src="./images/about@X1.jpg" srcset="./images/about@X2.jpg 2x" alt="Florist creating a bouquet" loading="lazy" width="600" height="428" class="floraAboutImage">
+            <img src="./images/about@X1.jpg" srcset="./images/about@X1.jpg 1x, ./images/about@X2.jpg 2x" alt="Florist creating a bouquet" loading="lazy" width="600" height="428" class="floraAboutImage">
           </picture>
         </figure>
       </div>
@@ -82,35 +82,8 @@
       <div class="floraContainer">
         <h2 class="floraSectionTitle">Top-Selling Bouquets</h2>
         <div class="floraTrendingSlider">
-          <ul class="floraTrendingList">
-            <li class="floraTrendingItem">
-              <picture>
-                <source type="image/webp" srcset="./images/top-bouquet-1@X1.webp 1x, ./images/top-bouquet-1@X2.webp 2x">
-                <img src="./images/top-bouquet-1@X1.jpg" srcset="./images/top-bouquet-1@X2.jpg 2x" alt="Spring Elegance" loading="lazy" width="400" height="320" class="floraTrendingImg">
-              </picture>
-              <h3 class="floraTrendingItemTitle">Spring Elegance</h3>
-              <p class="floraText floraTrendingItemText">A delicate blend of peonies, tulips, and roses — perfect for springtime gifting and bright smiles.</p>
-              <p class="floraTrendingItemPrice">$35</p>
-            </li>
-            <li class="floraTrendingItem">
-              <picture>
-                <source type="image/webp" srcset="./images/top-bouquet-2@X1.webp 1x, ./images/top-bouquet-2@X2.webp 2x">
-                <img src="./images/top-bouquet-2@X1.jpg" srcset="./images/top-bouquet-2@X2.jpg 2x" alt="Crimson Rose" loading="lazy" width="400" height="320" class="floraTrendingImg">
-              </picture>
-              <h3 class="floraTrendingItemTitle">Crimson Rose</h3>
-              <p class="floraText floraTrendingItemText">A stylish composition of roses, seasonal greenery, and vibrant berries — a bold and elegant floral statement.</p>
-              <p class="floraTrendingItemPrice">$55</p>
-            </li>
-            <li class="floraTrendingItem">
-              <picture>
-                <source type="image/webp" srcset="./images/top-bouquet-3@X1.webp 1x, ./images/top-bouquet-3@X2.webp 2x">
-                <img src="./images/top-bouquet-3@X1.jpg" srcset="./images/top-bouquet-3@X2.jpg 2x" alt="Sunny Bliss" loading="lazy" width="400" height="320" class="floraTrendingImg">
-              </picture>
-              <h3 class="floraTrendingItemTitle">Sunny Bliss</h3>
-              <p class="floraText floraTrendingItemText">A rich bouquet with lavender, lisianthus, and roses — ideal for those who love deep hues and gentle fragrance.</p>
-              <p class="floraTrendingItemPrice">$40</p>
-            </li>
-          </ul>
+          <p class="floraFormStatus floraFormStatus--error" data-bestsellers-error hidden></p>
+          <ul class="floraTrendingList"></ul>
 
           <div class="floraTrendingPagination">
             <ul class="floraSliderDots">
@@ -140,82 +113,13 @@
         <h2 class="floraSectionTitle">Bouquets</h2>
         <p class="floraSectionDesc">Explore our stunning selection of fresh flower bouquets.</p>
 
-        <ul class="floraBouquetsList bouquets">
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-1@X1.webp 1x, ./images/bouquet-1@X2.webp 2x">
-              <img src="./images/bouquet-1@X1.jpg" srcset="./images/bouquet-1@X2.jpg 2x" alt="Bouquet 1" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Peach Meadow</h3>
-            <p class="floraText floraTrendingItemText">A soft and radiant arrangement of peach and blush roses with lush greenery in a straw basket — light and natural.</p>
-            <p class="floraBouquetPrice">$55</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-2@X1.webp 1x, ./images/bouquet-2@X2.webp 2x">
-              <img src="./images/bouquet-2@X1.jpg" srcset="./images/bouquet-2@X2.jpg 2x" alt="Bouquet 2" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Blush Romance</h3>
-            <p class="floraText floraTrendingItemText">A premium bouquet of deep pink and ivory roses, complemented by silver eucalyptus — sophisticated and intimate.</p>
-            <p class="floraBouquetPrice">$34</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-3@X1.webp 1x, ./images/bouquet-3@X2.webp 2x">
-              <img src="./images/bouquet-3@X1.jpg" srcset="./images/bouquet-3@X2.jpg 2x" alt="Bouquet 3" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Pastel Garden</h3>
-            <p class="floraText floraTrendingItemText">A pastel-toned mix of spray roses and greenery in a woven basket — gentle, airy, and perfect for any occasion.</p>
-            <p class="floraBouquetPrice">$40</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-4@X1.webp 1x, ./images/bouquet-4@X2.webp 2x">
-              <img src="./images/bouquet-4@X1.jpg" srcset="./images/bouquet-4@X2.jpg 2x" alt="Bouquet 4" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Tulip Charm</h3>
-            <p class="floraText floraTrendingItemText">A vivid bouquet of bright tulips and roses in a lavender box — cheerful and full of charm.</p>
-            <p class="floraBouquetPrice">$61</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-5@X1.webp 1x, ./images/bouquet-5@X2.webp 2x">
-              <img src="./images/bouquet-5@X1.jpg" srcset="./images/bouquet-5@X2.jpg 2x" alt="Bouquet 5" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Berry Bloom</h3>
-            <p class="floraText floraTrendingItemText">A lush mix of rich pink, purple, and cream blooms with textured greens — romantic and elegant.</p>
-            <p class="floraBouquetPrice">$32</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-6@X1.webp 1x, ./images/bouquet-6@X2.webp 2x">
-              <img src="./images/bouquet-6@X1.jpg" srcset="./images/bouquet-6@X2.jpg 2x" alt="Bouquet 6" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Sweet Whisper</h3>
-            <p class="floraText floraTrendingItemText">A charming spring bouquet with peonies, roses, and lilac-toned accents — fresh, lively, and expressive.</p>
-            <p class="floraBouquetPrice">$40</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-7@X1.webp 1x, ./images/bouquet-7@X2.webp 2x">
-              <img src="./images/bouquet-7@X1.jpg" srcset="./images/bouquet-7@X2.jpg 2x" alt="Bouquet 7" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Field Joy</h3>
-            <p class="floraText floraTrendingItemText">A rustic hand-tied bouquet of sunflowers, lisianthus, and daisies — perfect for brightening the day.</p>
-            <p class="floraBouquetPrice">$49</p>
-          </li>
-          <li>
-            <picture>
-              <source type="image/webp" srcset="./images/bouquet-8@X1.webp 1x, ./images/bouquet-8@X2.webp 2x">
-              <img src="./images/bouquet-8@X1.jpg" srcset="./images/bouquet-8@X2.jpg 2x" alt="Bouquet 8" loading="lazy" width="250" class="floraBouquetImage">
-            </picture>
-            <h3 class="floraBouquetTitle">Soft Bloom</h3>
-            <p class="floraText floraTrendingItemText">A delicate bouquet of pink carnations and roses wrapped in satin paper — soft, stylish, and versatile.</p>
-            <p class="floraBouquetPrice">$37</p>
-          </li>
-        </ul>
+        <p class="floraLoader" data-bouquets-loader hidden>Loading bouquets...</p>
+        <p class="floraFormStatus floraFormStatus--error" data-bouquets-error hidden></p>
 
-        <button type="button" class="floraPrimaryBtn">Show More</button>
+        <ul class="floraBouquetsList bouquets" data-bouquets-list></ul>
+
+        <button type="button" class="floraPrimaryBtn" data-bouquets-load-more hidden>Show More</button>
+        <p class="floraBouquetsEnd" data-bouquets-end hidden>We're sorry, but you've reached the end of search results.</p>
       </div>
     </section>
 
@@ -277,7 +181,7 @@
         <figure>
           <picture>
             <source type="image/webp" srcset="./images/contacts@X1.webp 1x, ./images/contacts@X2.webp 2x">
-            <img src="./images/contacts@X1.jpg" srcset="./images/contacts@X2.jpg 2x" alt="Florist table" loading="lazy" width="700" height="396" class="floraContactsImage">
+            <img src="./images/contacts@X1.jpg" srcset="./images/contacts@X1.jpg 1x, ./images/contacts@X2.jpg 2x" alt="Florist table" loading="lazy" width="700" height="396" class="floraContactsImage">
           </picture>
         </figure>
       </div>
@@ -339,9 +243,72 @@
     </div>
   </div>
 
-  <script src="./js/slider.js"></script>
-  <script src="./js/mobile-menu.js"></script>
-  <script src="./js/scroll-top.js"></script>
+  <div class="floraModal floraProductModal" data-product-modal>
+    <div class="floraModalBackdrop" data-product-modal-backdrop></div>
+    <div class="floraModalDialog floraProductModalDialog" role="dialog" aria-modal="true" aria-labelledby="floraProductModalTitle">
+      <button type="button" class="floraModalClose" aria-label="Close modal" data-product-modal-close>
+        <svg width="24" height="24"><use href="./images/icons.svg#close_x"></use></svg>
+      </button>
+
+      <figure class="floraProductModalImageWrapper">
+        <picture>
+          <source type="image/webp" data-product-modal-source srcset="">
+          <img data-product-modal-image src="" srcset="" alt="" loading="lazy" class="floraProductModalImage">
+        </picture>
+      </figure>
+
+      <div class="floraProductModalContent">
+        <h2 id="floraProductModalTitle" class="floraProductModalTitle" data-product-modal-title></h2>
+        <p class="floraProductModalPrice" data-product-modal-price></p>
+        <p class="floraText floraProductModalDescription" data-product-modal-description></p>
+
+        <div class="floraProductModalActions">
+          <button type="button" class="floraPrimaryBtn floraProductModalBuyBtn" data-product-modal-buy>Buy now</button>
+          <input type="number" min="1" value="1" aria-label="Quantity" class="floraProductModalQtyInput" data-product-modal-qty>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="floraModal" data-modal>
+    <div class="floraModalBackdrop" data-modal-backdrop></div>
+    <div class="floraModalDialog" role="dialog" aria-modal="true" aria-labelledby="floraModalTitle">
+      <button type="button" class="floraModalClose" aria-label="Close modal" data-modal-close>
+        <svg width="24" height="24"><use href="./images/icons.svg#close_x"></use></svg>
+      </button>
+      <h2 id="floraModalTitle" class="floraSectionTitle floraModalTitle">Order</h2>
+
+      <form class="floraOrderForm" data-order-form novalidate>
+        <input type="hidden" name="bouquet" data-modal-bouquet-field>
+        <input type="hidden" name="quantity" data-modal-quantity-field>
+
+        <label class="floraFormField" for="orderName">
+          Name*
+          <input type="text" id="orderName" name="name" placeholder="Ann" required>
+        </label>
+
+        <label class="floraFormField" for="orderPhone">
+          Phone*
+          <input type="tel" id="orderPhone" name="phone" placeholder="+1 (555) 123-4567" required>
+        </label>
+
+        <label class="floraFormField" for="orderAddress">
+          Address*
+          <input type="text" id="orderAddress" name="address" placeholder="456 Floral Ave, Sydney NSW 2000 AU" required>
+        </label>
+
+        <label class="floraFormField" for="orderMessage">
+          Message
+          <textarea id="orderMessage" name="message" placeholder="Type your message..." rows="3"></textarea>
+        </label>
+
+        <button type="submit" class="floraPrimaryBtn floraOrderSubmitBtn">Go to Checkout</button>
+        <p class="floraFormStatus" data-order-status hidden></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ once: true });</script>
 </body>

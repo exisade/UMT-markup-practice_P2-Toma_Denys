@@ -1,0 +1,184 @@
+{
+  "bestsellers": [
+    {
+      "id": "1",
+      "title": "Spring Elegance",
+      "description": "A delicate blend of peonies, tulips, and roses — perfect for springtime gifting and bright smiles.",
+      "price": 35,
+      "image": "top-bouquet-1"
+    },
+    {
+      "id": "2",
+      "title": "Crimson Rose",
+      "description": "A stylish composition of roses, seasonal greenery, and vibrant berries — a bold and elegant floral statement.",
+      "price": 55,
+      "image": "top-bouquet-2"
+    },
+    {
+      "id": "3",
+      "title": "Sunny Bliss",
+      "description": "A rich bouquet with lavender, lisianthus, and roses — ideal for those who love deep hues and gentle fragrance.",
+      "price": 40,
+      "image": "top-bouquet-3"
+    }
+  ],
+  "bouquets": [
+    {
+      "id": "1",
+      "title": "Peach Meadow",
+      "description": "A soft and radiant arrangement of peach and blush roses with lush greenery in a straw basket — light and natural.",
+      "price": 55,
+      "category": "Roses",
+      "image": "bouquet-1"
+    },
+    {
+      "id": "2",
+      "title": "Blush Romance",
+      "description": "A premium bouquet of deep pink and ivory roses, complemented by silver eucalyptus — sophisticated and intimate.",
+      "price": 34,
+      "category": "Roses",
+      "image": "bouquet-2"
+    },
+    {
+      "id": "3",
+      "title": "Pastel Garden",
+      "description": "A pastel-toned mix of spray roses and greenery in a woven basket — gentle, airy, and perfect for any occasion.",
+      "price": 40,
+      "category": "Mixed",
+      "image": "bouquet-3"
+    },
+    {
+      "id": "4",
+      "title": "Tulip Charm",
+      "description": "A vivid bouquet of bright tulips and roses in a lavender box — cheerful and full of charm.",
+      "price": 61,
+      "category": "Tulips",
+      "image": "bouquet-4"
+    },
+    {
+      "id": "5",
+      "title": "Berry Bloom",
+      "description": "A lush mix of rich pink, purple, and cream blooms with textured greens — romantic and elegant.",
+      "price": 32,
+      "category": "Mixed",
+      "image": "bouquet-5"
+    },
+    {
+      "id": "6",
+      "title": "Sweet Whisper",
+      "description": "A charming spring bouquet with peonies, roses, and lilac-toned accents — fresh, lively, and expressive.",
+      "price": 40,
+      "category": "Seasonal",
+      "image": "bouquet-6"
+    },
+    {
+      "id": "7",
+      "title": "Field Joy",
+      "description": "A rustic hand-tied bouquet of sunflowers, lisianthus, and daisies — perfect for brightening the day.",
+      "price": 49,
+      "category": "Seasonal",
+      "image": "bouquet-7"
+    },
+    {
+      "id": "8",
+      "title": "Soft Bloom",
+      "description": "A delicate bouquet of pink carnations and roses wrapped in satin paper — soft, stylish, and versatile.",
+      "price": 37,
+      "category": "Roses",
+      "image": "bouquet-8"
+    },
+    {
+      "id": "9",
+      "title": "Golden Hour",
+      "description": "A warm, sunlit bouquet of tulips and ranunculus wrapped in kraft paper — cozy and inviting.",
+      "price": 44,
+      "category": "Tulips",
+      "image": "bouquet-1"
+    },
+    {
+      "id": "10",
+      "title": "Velvet Bloom",
+      "description": "A deep-toned bouquet of burgundy roses and eucalyptus — moody, rich, and romantic.",
+      "price": 58,
+      "category": "Roses",
+      "image": "bouquet-2"
+    },
+    {
+      "id": "11",
+      "title": "Cottage Mix",
+      "description": "An informal garden mix of seasonal blooms in soft pastel tones — relaxed and charming.",
+      "price": 36,
+      "category": "Mixed",
+      "image": "bouquet-3"
+    },
+    {
+      "id": "12",
+      "title": "Lavender Fields",
+      "description": "A fragrant bouquet of lavender, lisianthus, and white roses — calm, elegant, and timeless.",
+      "price": 47,
+      "category": "Seasonal",
+      "image": "bouquet-4"
+    },
+    {
+      "id": "13",
+      "title": "Coral Sunrise",
+      "description": "A vibrant coral and peach bouquet of tulips and spray roses — energetic and joyful.",
+      "price": 42,
+      "category": "Tulips",
+      "image": "bouquet-5"
+    },
+    {
+      "id": "14",
+      "title": "Ivory Grace",
+      "description": "An elegant all-white bouquet of roses and greenery — timeless and refined.",
+      "price": 62,
+      "category": "Roses",
+      "image": "bouquet-6"
+    },
+    {
+      "id": "15",
+      "title": "Wildflower Dream",
+      "description": "A loose, natural bouquet of wildflowers and grasses — whimsical and free-spirited.",
+      "price": 33,
+      "category": "Seasonal",
+      "image": "bouquet-7"
+    },
+    {
+      "id": "16",
+      "title": "Rosewood Charm",
+      "description": "A textured mix of dusty pink roses and dried accents — earthy and stylish.",
+      "price": 50,
+      "category": "Mixed",
+      "image": "bouquet-8"
+    },
+    {
+      "id": "17",
+      "title": "Tulip Serenade",
+      "description": "A refined bouquet of white and blush tulips wrapped in linen — soft and serene.",
+      "price": 39,
+      "category": "Tulips",
+      "image": "bouquet-1"
+    },
+    {
+      "id": "18",
+      "title": "Garden Whisper",
+      "description": "A lush mix of seasonal greenery and pastel blooms — gentle and full of texture.",
+      "price": 45,
+      "category": "Mixed",
+      "image": "bouquet-2"
+    }
+  ],
+  "subscribers": [],
+  "orders": [
+    {
+      "name": "Denys",
+      "phone": "1231333213",
+      "address": "Florar",
+      "message": "asda",
+      "bouquet": "Pastel Garden",
+      "quantity": "1",
+      "id": "doeYLtMquPU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

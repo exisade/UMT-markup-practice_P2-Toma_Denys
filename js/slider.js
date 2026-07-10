@@ -1,4 +1,4 @@
-const setupSlider = (wrapperSelector, listSelector, prevSelector, nextSelector, dotsContainerSelector) => {
+export const setupSlider = (wrapperSelector, listSelector, prevSelector, nextSelector, dotsContainerSelector) => {
   const wrapper = document.querySelector(wrapperSelector);
   if (!wrapper) return;
 
@@ -108,15 +108,6 @@ const setupSlider = (wrapperSelector, listSelector, prevSelector, nextSelector, 
   // Initial state
   updateButtons();
 };
-
-// Initialize bestsellers slider
-setupSlider(
-  '.floraTrendingSlider',
-  '.floraTrendingList',
-  '.floraPrevBtn',
-  '.floraNextBtn',
-  '.floraSliderDots'
-);
 
 // Initialize feedback slider
 setupSlider(
