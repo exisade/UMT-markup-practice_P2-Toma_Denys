@@ -8,8 +8,11 @@ const endMessageRef = document.querySelector('[data-bouquets-end]');
 
 const LIMIT = 8;
 
+const BASE = import.meta.env.BASE_URL;
+
 const state = {
   page: 1,
+  loaded: 0,
 };
 
 const bouquetCardMarkup = ({ title, description, price, image }) => `
@@ -25,9 +28,20 @@ const bouquetCardMarkup = ({ title, description, price, image }) => `
     data-image="${image}"
   >
     <picture>
-      <source type="image/webp" srcset="./images/${image}@X1.webp 1x, ./images/${image}@X2.webp 2x">
-      <img src="./images/${image}@X1.jpg" srcset="./images/${image}@X1.jpg 1x, ./images/${image}@X2.jpg 2x" alt="${title}" loading="lazy" width="250" class="floraBouquetImage">
+      <source
+        type="image/webp"
+        srcset="${BASE}images/${image}@X1.webp 1x, ${BASE}images/${image}@X2.webp 2x"
+      />
+      <img
+        src="${BASE}images/${image}@X1.jpg"
+        srcset="${BASE}images/${image}@X1.jpg 1x, ${BASE}images/${image}@X2.jpg 2x"
+        alt="${title}"
+        loading="lazy"
+        width="250"
+        class="floraBouquetImage"
+      />
     </picture>
+
     <h3 class="floraBouquetTitle">${title}</h3>
     <p class="floraText floraTrendingItemText">${description}</p>
     <p class="floraBouquetPrice">$${price}</p>
@@ -44,7 +58,8 @@ const hideLoader = () => {
 
 const showError = () => {
   if (errorRef) {
-    errorRef.textContent = "We're sorry, something went wrong while loading bouquets. Please try again later.";
+    errorRef.textContent =
+      "We're sorry, something went wrong while loading bouquets. Please try again later.";
     errorRef.hidden = false;
   }
 };
@@ -59,23 +74,39 @@ const loadBouquets = async ({ reset }) => {
 
   if (reset) {
     state.page = 1;
+    state.loaded = 0;
     listRef.innerHTML = '';
     if (endMessageRef) endMessageRef.hidden = true;
     if (loadMoreBtnRef) loadMoreBtnRef.hidden = true;
   }
 
   try {
-    const { data, next } = await getBouquets({ page: state.page, limit: LIMIT });
+    const { data, next, items } = await getBouquets({
+      page: state.page,
+      limit: LIMIT,
+    });
 
-    listRef.insertAdjacentHTML('beforeend', data.map(bouquetCardMarkup).join(''));
+    listRef.insertAdjacentHTML(
+      'beforeend',
+      data.map(bouquetCardMarkup).join('')
+    );
+
+    state.loaded += data.length;
+
+    const hasKnownTotal = Number.isFinite(items) && items > 0;
+    const isEnd = hasKnownTotal
+      ? state.loaded >= items
+      : next === null || data.length < LIMIT;
 
     if (loadMoreBtnRef) {
-      loadMoreBtnRef.hidden = next === null;
+      loadMoreBtnRef.hidden = isEnd;
     }
+
     if (endMessageRef) {
-      endMessageRef.hidden = !(next === null && data.length > 0);
+      endMessageRef.hidden = !(isEnd && state.loaded > 0);
     }
   } catch (error) {
+    console.error(error);
     showError();
     if (loadMoreBtnRef) loadMoreBtnRef.hidden = true;
   } finally {
@@ -93,5 +124,7 @@ export const initBouquets = () => {
 
   loadBouquets({ reset: true });
 
-  if (loadMoreBtnRef) loadMoreBtnRef.addEventListener('click', handleLoadMore);
+  if (loadMoreBtnRef) {
+    loadMoreBtnRef.addEventListener('click', handleLoadMore);
+  }
 };
