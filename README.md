@@ -126,7 +126,8 @@ Live links:
 
 ## API
 
-The frontend consumes the following endpoints:
+
+https://umt-markup-practice-p2-toma-denys.onrender.com
 
 ```
 GET  /bouquets?_page=<page>&_limit=<limit>   # Paginated bouquet catalog
