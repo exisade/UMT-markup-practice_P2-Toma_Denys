@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover stunning floral arrangements and beautiful fresh bouquets for every occasion at Flora. We bring joy and elegance to your celebrations.">
+  <title>Flora - Floral Artistry</title>
+  <link rel="icon" type="image/svg+xml" href="/UMT-markup-practice_P2-Toma_Denys/assets/favicon-D2NO1_P5.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+  <script type="module" crossorigin src="/UMT-markup-practice_P2-Toma_Denys/assets/index-UcPMBWsa.js"></script>
+  <link rel="stylesheet" crossorigin href="/UMT-markup-practice_P2-Toma_Denys/assets/index-C1O0YQk1.css">
+</head>
+<body>
+
+  <header class="floraHeader">
+    <div class="floraContainer">
+      <a href="./index.html" aria-label="Flora Home" class="floraHeaderLogoLink animate__animated animate__pulse">
+        <svg width="84" height="36"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#Logo"></use></svg>
+      </a>
+
+      <nav class="floraNav">
+        <ul class="floraNavList">
+          <li><a href="#about"       class="floraLink">About Us</a></li>
+          <li><a href="#bestsellers" class="floraLink">Bestsellers</a></li>
+          <li><a href="#bouquets"    class="floraLink">Bouquets</a></li>
+          <li><a href="#feedback"    class="floraLink">Feedback</a></li>
+          <li><a href="#contacts"    class="floraLink">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <a href="#bouquets" class="floraPrimaryBtn floraHeaderExploreBtn">Explore Bouquets</a>
+
+      <button type="button" aria-label="Toggle mobile menu" aria-expanded="false" class="floraMenuToggle" data-menu-button>
+        <svg class="floraMenuIcon" width="24" height="24">
+          <use class="floraMenuIcon--burger" href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#menu"></use>
+          <use class="floraMenuIcon--close" href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#close_x"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="floraSection floraHeroSection">
+      <div class="floraContainer">
+        <div class="floraHeroContent">
+          <h1 class="floraHeroTitle">Brighten Your Day with Our Stunning Bouquets</h1>
+          <p class="floraText floraHeroSubtitle">At Flora, we believe that every occasion deserves a beautiful bouquet. Our expertly crafted arrangements are designed to bring joy and elegance to your celebrations.</p>
+          <a href="#bouquets" class="floraPrimaryBtn">Explore Our Bestsellers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="floraSection floraAboutSection" data-aos="fade-right">
+      <div class="floraContainer floraAboutBlock">
+        <div class="floraAboutTextArea">
+          <svg width="96" height="85"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#flower"></use></svg>
+          <div class="floraAboutText">
+            <h2 class="floraSectionTitle">Our Passion for Floral Artistry</h2>
+            <p class="floraText">At Flora, we believe that every bouquet tells a story. Our team meticulously crafts each arrangement, blending creativity with the freshest blooms to create stunning pieces for every occasion.</p>
+          </div>
+        </div>
+        <figure class="floraAboutImageWrapper">
+          <picture>
+            <source type="image/webp" srcset="/UMT-markup-practice_P2-Toma_Denys/assets/about@X1-1_GL9RsI.webp 1x, /UMT-markup-practice_P2-Toma_Denys/assets/about@X2-CAFDkorH.webp 2x">
+            <img src="/UMT-markup-practice_P2-Toma_Denys/assets/about@X1-UNb5W7xP.jpg" srcset="/UMT-markup-practice_P2-Toma_Denys/assets/about@X1-UNb5W7xP.jpg 1x, /UMT-markup-practice_P2-Toma_Denys/assets/about@X2-DGkDZlY7.jpg 2x" alt="Florist creating a bouquet" loading="lazy" width="600" height="428" class="floraAboutImage">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Bestsellers / Trending Slider -->
+    <section id="bestsellers" class="floraSection floraTrendingSection" data-aos="fade-up">
+      <div class="floraContainer">
+        <h2 class="floraSectionTitle">Top-Selling Bouquets</h2>
+        <div class="floraTrendingSlider">
+          <p class="floraFormStatus floraFormStatus--error" data-bestsellers-error hidden></p>
+          <ul class="floraTrendingList"></ul>
+
+          <div class="floraTrendingPagination">
+            <ul class="floraSliderDots">
+              <li class="floraDot is-current"></li>
+              <li class="floraDot"></li>
+              <li class="floraDot"></li>
+              <li class="floraDot"></li>
+              <li class="floraDot"></li>
+              <li class="floraDot"></li>
+            </ul>
+            <div class="floraSliderControls">
+              <button type="button" aria-label="Previous" class="floraSliderBtn floraPrevBtn">
+                <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#left-arrow-alt"></use></svg>
+              </button>
+              <button type="button" aria-label="Next" class="floraSliderBtn floraNextBtn">
+                <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#right-arrow-alt"></use></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bouquets Grid -->
+    <section id="bouquets" class="floraSection floraBouquetsSection" data-aos="fade-up">
+      <div class="floraContainer">
+        <h2 class="floraSectionTitle">Bouquets</h2>
+        <p class="floraSectionDesc">Explore our stunning selection of fresh flower bouquets.</p>
+
+        <p class="floraLoader" data-bouquets-loader hidden>Loading bouquets...</p>
+        <p class="floraFormStatus floraFormStatus--error" data-bouquets-error hidden></p>
+
+        <ul class="floraBouquetsList bouquets" data-bouquets-list></ul>
+
+        <button type="button" class="floraPrimaryBtn" data-bouquets-load-more hidden>Show More</button>
+        <p class="floraBouquetsEnd" data-bouquets-end hidden>We're sorry, but you've reached the end of search results.</p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="feedback" class="floraSection floraReviewsSection" data-aos="fade-right">
+      <div class="floraContainer">
+        <h2 class="floraSectionTitle">What our clients says</h2>
+        <div class="floraReviewsSliderWrapper">
+          <ul class="floraReviewsList">
+            <li class="floraReviewsItem">
+              <p class="floraText">"Flora made my anniversary unforgettable with their beautiful arrangement!"</p>
+              <p class="floraReviewsPerson">Emma T.</p>
+            </li>
+            <li class="floraReviewsItem">
+              <p class="floraText">Absolutely stunning bouquet! It looked even better than the photo and arrived right on time.</p>
+              <p class="floraReviewsPerson">Daniel R.</p>
+            </li>
+            <li class="floraReviewsItem">
+              <p class="floraText">The service was exceptional, and the flowers were fresh!</p>
+              <p class="floraReviewsPerson">Olivia M.</p>
+            </li>
+          </ul>
+          <div class="floraReviewsPaginationButtons">
+            <button type="button" aria-label="Previous" class="floraSliderBtn floraPrevBtn">
+              <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#left-arrow-alt"></use></svg>
+            </button>
+            <button type="button" aria-label="Next" class="floraSliderBtn floraNextBtn">
+              <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#right-arrow-alt"></use></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts" class="floraSection floraContactsSection" data-aos="zoom-in">
+      <div class="floraContainer">
+        <p class="floraContactsConnect">Connect</p>
+        <h2 class="floraSectionTitle">Get in Touch</h2>
+        <p class="floraContactsSubtitle">We're here to assist you with all your floral needs and inquiries.</p>
+
+        <address class="floraContactsList">
+          <div class="floraContactItem">
+            <svg width="24" height="24" class="floraContactIcon"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#phone"></use></svg>
+            <div class="contact-details">
+              <p class="floraContactLabel">Phone</p>
+              <a href="tel:+15551234567" class="floraContactLink">+1 (555) 123-4567</a>
+            </div>
+          </div>
+          <div class="floraContactItem">
+            <svg width="24" height="24" class="floraContactIcon"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#map"></use></svg>
+            <div class="contact-details">
+              <p class="floraContactLabel">Store</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=456+Floral+Ave,+Sydney+NSW+2000+AU" target="_blank" rel="noopener noreferrer" class="floraContactLink">456 Floral Ave, Sydney NSW 2000 AU</a>
+            </div>
+          </div>
+        </address>
+
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="/UMT-markup-practice_P2-Toma_Denys/assets/contacts@X1-Dn_n7-Wd.webp 1x, /UMT-markup-practice_P2-Toma_Denys/assets/contacts@X2-5sjBfOiv.webp 2x">
+            <img src="/UMT-markup-practice_P2-Toma_Denys/assets/contacts@X1-B5c8kL4p.jpg" srcset="/UMT-markup-practice_P2-Toma_Denys/assets/contacts@X1-B5c8kL4p.jpg 1x, /UMT-markup-practice_P2-Toma_Denys/assets/contacts@X2-Bl9CJbdv.jpg 2x" alt="Florist table" loading="lazy" width="700" height="396" class="floraContactsImage">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="floraFooterSection">
+    <div class="floraContainer">
+      <a href="./index.html" aria-label="Flora Home" class="floraFooterLogoLink">
+        <svg class="floraFooterLogo" aria-label="Flora Footer Logo" viewBox="0 0 84 36"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#Logo"></use></svg>
+      </a>
+
+      <ul class="floraFooterNavigationList">
+        <li><a href="#about"       class="floraLink">About Us</a></li>
+        <li><a href="#bestsellers" class="floraLink">Bestsellers</a></li>
+        <li><a href="#bouquets"    class="floraLink">Bouquets</a></li>
+        <li><a href="#feedback"    class="floraLink">Feedback</a></li>
+        <li><a href="#contacts"    class="floraLink">Contacts</a></li>
+      </ul>
+
+      <ul class="floraFooterSocials">
+        <li>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="floraLink">
+            <svg class="social-icon"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#Facebook"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="floraLink">
+            <svg class="social-icon"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#Instagram"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com" aria-label="Twitter(X)" target="_blank" rel="noopener noreferrer" class="floraLink">
+            <svg class="social-icon"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#X"></use></svg>
+          </a>
+        </li>
+      </ul>
+
+      <hr class="floraFooterDivider">
+      <p class="floraFooterCopyright">&copy; 2025 Flora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button type="button" id="floraScrollBtn" aria-label="Scroll to top" class="floraScrollBtn">
+    <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#top-arrow-alt"></use></svg>
+  </button>
+
+  <div id="floraMobileNav" data-menu class="floraMobileNav">
+    <div class="floraContainer">
+      <ul class="floraMenuNavigationList">
+        <li><a href="#about"       class="floraLink">About Us</a></li>
+        <li><a href="#bestsellers" class="floraLink">Bestsellers</a></li>
+        <li><a href="#bouquets"    class="floraLink">Bouquets</a></li>
+        <li><a href="#feedback"    class="floraLink">Feedback</a></li>
+        <li><a href="#contacts"    class="floraLink">Contacts</a></li>
+      </ul>
+      <a href="#bouquets" class="floraPrimaryBtn floraMenuActionButton">Explore Bouquets</a>
+    </div>
+  </div>
+
+  <div class="floraModal floraProductModal" data-product-modal>
+    <div class="floraModalBackdrop" data-product-modal-backdrop></div>
+    <div class="floraModalDialog floraProductModalDialog" role="dialog" aria-modal="true" aria-labelledby="floraProductModalTitle">
+      <button type="button" class="floraModalClose" aria-label="Close modal" data-product-modal-close>
+        <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#close_x"></use></svg>
+      </button>
+
+      <figure class="floraProductModalImageWrapper">
+        <picture>
+          <source type="image/webp" data-product-modal-source srcset="">
+          <img data-product-modal-image src="" srcset="" alt="" loading="lazy" class="floraProductModalImage">
+        </picture>
+      </figure>
+
+      <div class="floraProductModalContent">
+        <h2 id="floraProductModalTitle" class="floraProductModalTitle" data-product-modal-title></h2>
+        <p class="floraProductModalPrice" data-product-modal-price></p>
+        <p class="floraText floraProductModalDescription" data-product-modal-description></p>
+
+        <div class="floraProductModalActions">
+          <button type="button" class="floraPrimaryBtn floraProductModalBuyBtn" data-product-modal-buy>Buy now</button>
+          <input type="number" min="1" value="1" aria-label="Quantity" class="floraProductModalQtyInput" data-product-modal-qty>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="floraModal" data-modal>
+    <div class="floraModalBackdrop" data-modal-backdrop></div>
+    <div class="floraModalDialog" role="dialog" aria-modal="true" aria-labelledby="floraModalTitle">
+      <button type="button" class="floraModalClose" aria-label="Close modal" data-modal-close>
+        <svg width="24" height="24"><use href="/UMT-markup-practice_P2-Toma_Denys/assets/icons-3Mi1HjYC.svg#close_x"></use></svg>
+      </button>
+      <h2 id="floraModalTitle" class="floraSectionTitle floraModalTitle">Order</h2>
+
+      <form class="floraOrderForm" data-order-form novalidate>
+        <input type="hidden" name="bouquet" data-modal-bouquet-field>
+        <input type="hidden" name="quantity" data-modal-quantity-field>
+
+        <label class="floraFormField" for="orderName">
+          Name*
+          <input type="text" id="orderName" name="name" placeholder="Ann" required>
+        </label>
+
+        <label class="floraFormField" for="orderPhone">
+          Phone*
+          <input type="tel" id="orderPhone" name="phone" placeholder="+1 (555) 123-4567" required>
+        </label>
+
+        <label class="floraFormField" for="orderAddress">
+          Address*
+          <input type="text" id="orderAddress" name="address" placeholder="456 Floral Ave, Sydney NSW 2000 AU" required>
+        </label>
+
+        <label class="floraFormField" for="orderMessage">
+          Message
+          <textarea id="orderMessage" name="message" placeholder="Type your message..." rows="3"></textarea>
+        </label>
+
+        <button type="submit" class="floraPrimaryBtn floraOrderSubmitBtn">Go to Checkout</button>
+        <p class="floraFormStatus" data-order-status hidden></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
+</body>
+</html>
