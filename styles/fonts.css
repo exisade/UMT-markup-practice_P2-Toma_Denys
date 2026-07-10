@@ -1,0 +1,39 @@
+:root {
+  --font-primary: 'Roboto', sans-serif;
+  --font-heading: 'Hanuman', serif;
+
+  /* Typography sizes */
+  --size-hero: 36px;
+  --size-h2: 48px;
+  --size-h3: 40px;
+  --size-text: 18px;
+
+  /* Font weights */
+  --weight-hero: 400;
+  --weight-h2: 400;
+  --weight-h3: 400;
+  --weight-text: 400;
+
+  /* Line heights */
+  --lh-heading: 1.2;
+  --lh-text: 1.5;
+
+  /* Spacing (used for margins, padding, gaps) */
+  --space-xs: 8px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+  --space-5xl: 80px;
+
+  /* Border radius */
+  --radius-md: 16px;
+  --radius-full: 100px;
+
+  /* Transition timing */
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
+}

@@ -1,0 +1,1143 @@
+@import "./reset.css";
+@import "./colors.css";
+@import "./fonts.css";
+
+/* ============================
+   Global Styles & Typography
+   ============================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html:has(body.floraMenuOpen) {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--primary-text);
+  background-color: var(--primary-bg);
+  font-size: var(--size-text);
+  line-height: var(--lh-text);
+  overflow-x: hidden;
+}
+
+.floraSection {
+  padding: var(--space-4xl) 0;
+}
+
+.floraContainer {
+  box-sizing: border-box;
+  max-width: 375px;
+  padding: 0 var(--space-lg);
+  margin: 0 auto;
+}
+
+.floraText {
+  font-size: var(--size-text);
+  line-height: var(--lh-text);
+}
+
+.floraSectionTitle {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 34px;
+  line-height: var(--lh-heading);
+  margin-bottom: var(--space-xl);
+}
+
+.floraPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: var(--lh-text);
+  color: var(--primary-button-text);
+  background: var(--primary-button-bg);
+  padding: var(--space-sm) var(--space-lg);
+  transition: opacity var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing), transform var(--transition-duration) var(--transition-timing);
+}
+
+.floraPrimaryBtn:hover {
+  opacity: 0.8;
+}
+
+.floraPrimaryBtn:focus-visible {
+  outline: 2px solid var(--button-hover-overlay);
+  outline-offset: 2px;
+  opacity: 0.8;
+}
+
+.floraPrimaryBtn:active {
+  background: var(--primary-button-active-bg);
+  color: var(--text-light);
+  opacity: 1;
+  transform: scale(0.98);
+}
+
+.floraPrimaryBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.floraLink {
+  transition: opacity var(--transition-duration) var(--transition-timing);
+}
+
+.floraLink:hover,
+.floraLink:focus-visible {
+  opacity: 0.7;
+}
+
+/* ============================
+   Header & Navigation
+   ============================ */
+
+.floraHeader {
+  padding: var(--space-sm) 0;
+  position: relative;
+  z-index: 20;
+  background-color: var(--primary-bg);
+}
+
+.floraHeader .floraContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.floraHeaderLogo {
+  display: flex;
+}
+
+.floraNavList {
+  display: none;
+}
+
+.floraHeaderExploreBtn {
+  display: none;
+}
+
+.floraMenuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-3xl);
+  height: var(--space-3xl);
+}
+
+.floraMenuIcon {
+  width: var(--space-md);
+  height: var(--space-md);
+  fill: var(--primary-text);
+  stroke: none;
+}
+
+.floraMenuIcon--close {
+  display: none;
+}
+
+.floraMenuToggle.is-active .floraMenuIcon--close {
+  display: inline;
+}
+
+.floraMenuToggle.is-active .floraMenuIcon--burger {
+  display: none;
+}
+
+/* Hero Section */
+.floraHeroSection {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  background-color: var(--secondary-bg);
+  background-image: url('../images/hero@X1.jpg');
+  background-image: -webkit-image-set(url('../images/hero@X1.webp') 1x, url('../images/hero@X2.webp') 2x);
+  background-image: image-set(
+    url('../images/hero@X1.webp') type('image/webp') 1x,
+    url('../images/hero@X2.webp') type('image/webp') 2x,
+    url('../images/hero@X1.jpg') type('image/jpeg') 1x,
+    url('../images/hero@X2.jpg') type('image/jpeg') 2x
+  );
+  background-size: cover;
+  background-position: calc(50% - 30px) center;
+  background-repeat: no-repeat;
+  min-height: 669px;
+}
+
+.floraHeroSection .floraContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100%;
+}
+
+.floraHeroContent {
+  text-align: left;
+  padding: var(--space-3xl) 0;
+  width: 100%;
+}
+
+.floraHeroContent .floraPrimaryBtn {
+  width: 100%;
+  max-width: 334px;
+  padding: var(--space-sm) var(--space-xl);
+}
+
+.floraHeroTitle {
+  font-family: var(--font-heading);
+  font-size: var(--size-hero);
+  font-weight: var(--weight-hero);
+  line-height: var(--lh-heading);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xl);
+  max-width: 243px;
+}
+
+.floraHeroSubtitle {
+  margin-bottom: var(--space-2xl);
+  max-width: 247px;
+}
+
+/* ============================
+   About Section
+   ============================ */
+
+.floraAboutSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.floraAboutBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.floraAboutTextArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.floraAboutText {
+  flex: 1;
+}
+
+.floraAboutImageWrapper {
+  flex: 1;
+}
+
+.floraAboutImage {
+  border-radius: var(--radius-md);
+  width: 100%;
+  height: 428px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ============================
+   Bestsellers/Trending Section (Slider)
+   ============================ */
+
+.floraTrendingSection .floraSectionTitle {
+  font-size: 32px;
+  margin-bottom: var(--space-2xl);
+}
+
+.floraTrendingSlider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--space-2xl);
+}
+
+.floraTrendingList {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: var(--space-xl);
+}
+
+.floraTrendingList::-webkit-scrollbar {
+  display: none;
+}
+
+.floraTrendingItem {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.floraTrendingItem:hover .floraTrendingImg,
+.floraTrendingItem:focus-within .floraTrendingImg {
+  transform: scale(1.03);
+}
+
+.floraTrendingItem:hover,
+.floraTrendingItem:focus-within {
+  transform: translateY(-4px);
+}
+
+.floraTrendingImg {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.floraTrendingItemTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: var(--lh-heading);
+  margin-bottom: 0;
+}
+
+.floraTrendingItemText {
+  font-size: 14px;
+  line-height: var(--lh-text);
+}
+
+.floraTrendingItemPrice {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: var(--space-xs);
+}
+
+.floraTrendingPagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 53px;
+}
+
+.floraSliderDots {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.floraDot {
+  width: var(--space-xs);
+  height: var(--space-xs);
+  border-radius: 50%;
+  background-color: var(--border-light);
+  transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.floraDot.is-current {
+  background-color: var(--primary-text);
+}
+
+.floraSliderControls {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.floraSliderBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--space-3xl);
+  height: var(--space-3xl);
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  color: var(--primary-text);
+  padding: 0;
+  transition: border-color var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing);
+}
+
+.floraSliderBtn:disabled {
+  border-color: var(--border-lighter);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+}
+
+.floraSliderBtn:not(:disabled):hover,
+.floraSliderBtn:not(:disabled):focus-visible {
+  background-color: var(--button-hover-overlay);
+  border-color: transparent;
+  color: var(--primary-text);
+}
+
+.floraSliderBtn:not(:disabled):active {
+  background: var(--primary-button-bg);
+  border-color: transparent;
+  color: var(--primary-text);
+}
+
+/* ============================
+   Catalog (Bouquets)
+   ============================ */
+
+.floraBouquetsSection .floraSectionTitle {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.floraSectionDesc {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: var(--lh-heading);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.floraBouquetsSection .floraText {
+  text-align: center;
+}
+
+.floraBouquetImage {
+  width: 100%;
+  height: 296px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.floraBouquetsList li {
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.floraBouquetsList li:hover .floraBouquetImage,
+.floraBouquetsList li:focus-within .floraBouquetImage {
+  transform: scale(1.04);
+}
+
+.floraBouquetsList li:hover,
+.floraBouquetsList li:focus-within {
+  transform: translateY(-2px);
+}
+
+.floraBouquetsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.floraBouquetTitle {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.floraBouquetPrice {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  text-align: center;
+  margin-top: var(--space-xs);
+}
+
+.floraBouquetsSection .floraPrimaryBtn {
+  width: 100%;
+  margin-top: var(--space-2xl);
+}
+
+/* ============================
+   Feedback Section
+   ============================ */
+
+.floraReviewsSection .floraSectionTitle {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.floraReviewsSliderWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.floraReviewsList {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: var(--space-lg);
+}
+
+.floraReviewsList::-webkit-scrollbar {
+  display: none;
+}
+
+.floraReviewsItem {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing);
+}
+
+.floraReviewsItem:hover,
+.floraReviewsItem:focus-within {
+  border-color: var(--button-hover-overlay);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: rgba(66, 237, 19, 0.05);
+}
+
+.floraReviewsItem .floraText {
+  margin-bottom: var(--space-3xl);
+}
+
+.floraReviewsPerson {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.floraReviewsPaginationButtons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: flex-end;
+  margin-top: var(--space-2xl);
+}
+
+/* ============================
+   Contacts Section
+   ============================ */
+
+.floraContactsSection picture {
+  display: contents;
+}
+
+.floraContactsConnect {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--primary-text);
+}
+
+.floraContactsSubtitle {
+  font-size: 18px;
+  line-height: var(--lh-text);
+  margin-bottom: var(--space-xl);
+}
+
+.floraContactsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  font-style: normal;
+}
+
+.floraContactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.floraContactIcon {
+  flex-shrink: 0;
+}
+
+.floraContactLabel {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: var(--space-xs);
+  color: var(--primary-text);
+}
+
+.floraContactLink,
+.floraContactText {
+  font-size: 16px;
+  line-height: var(--lh-text);
+  color: var(--primary-text);
+}
+
+.floraContactLink {
+  text-decoration: underline;
+  transition: opacity var(--transition-duration) var(--transition-timing);
+  color: var(--primary-text);
+}
+
+.floraContactLink:hover,
+.floraContactLink:focus-visible {
+  opacity: 0.7;
+}
+
+.floraContactsSection figure {
+  margin: 0;
+  width: 100%;
+}
+
+.floraContactsImage {
+  width: 100%;
+  height: 312px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* ============================
+   Footer Section
+   ============================ */
+
+.floraFooterSection {
+  background-color: var(--footer-bg);
+  padding: var(--space-4xl) 0 var(--space-2xl);
+  text-align: center;
+}
+
+.floraFooterSection .floraContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floraFooterLogoLink {
+  margin-bottom: var(--space-3xl);
+}
+
+.floraFooterLogo {
+  width: 294px;
+  height: auto;
+}
+
+.floraFooterNavigationList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.floraFooterNavigationList a {
+  color: var(--primary-text);
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
+
+.floraFooterSocials {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.floraFooterDivider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-dark);
+  border: none;
+  margin-bottom: var(--space-xl);
+}
+
+.floraFooterCopyright {
+  font-size: 14px;
+  color: var(--primary-text);
+  margin-bottom: 0;
+}
+
+/* ============================
+   Scroll to Top Button
+   ============================ */
+
+.floraScrollBtn {
+  position: fixed;
+  bottom: var(--space-xl);
+  right: 10px;
+  width: var(--space-3xl);
+  height: var(--space-3xl);
+  background-color: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-duration) var(--transition-timing), visibility var(--transition-duration) var(--transition-timing), transform var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing);
+  z-index: 99;
+}
+
+.floraScrollBtn.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.floraScrollBtn.is-visible:hover,
+.floraScrollBtn.is-visible:focus-visible {
+  background-color: var(--button-hover-overlay);
+  border-color: transparent;
+  color: var(--primary-text);
+  transform: translateY(-4px);
+}
+
+.floraScrollBtn.is-visible:active {
+  background: var(--primary-button-bg);
+  border-color: transparent;
+  color: var(--primary-text);
+  transform: translateY(0);
+}
+
+.floraScrollBtn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ============================
+   Mobile Menu Overlay
+   ============================ */
+
+.floraMobileNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  padding: var(--space-5xl) 0 var(--space-xl);
+  overflow-y: auto;
+  background-color: var(--primary-bg);
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.floraMobileNav.is-active {
+  transform: translateX(0);
+}
+
+.floraMobileNav .floraContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.floraMenuNavigationList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2xl);
+  font-size: 16px;
+  margin-bottom: var(--space-xl);
+}
+
+.floraMenuActionButton {
+  width: 100%;
+  margin-top: var(--space-xl);
+}
+
+/* ============================
+   Responsive Design - Tablet (768px)
+   ============================ */
+
+@media screen and (min-width: 768px) {
+
+  .floraContainer {
+    max-width: 768px;
+    padding: 0 var(--space-2xl);
+  }
+
+  .floraHeroSection {
+    min-height: 669px;
+  }
+
+  .floraHeroSection .floraHeroTitle,
+  .floraHeroSection .floraHeroSubtitle {
+    max-width: 49%;
+  }
+
+  .floraHeroSection .floraContainer {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2xl);
+    padding-top: 104.5px;
+  }
+
+  .floraHeroContent {
+    flex: 1;
+  }
+
+  .floraHeaderExploreBtn {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: var(--space-xl);
+  }
+
+  body.floraMenuOpen .floraHeaderExploreBtn {
+    display: none;
+  }
+
+  .floraHeroContent .floraPrimaryBtn {
+    width: auto;
+  }
+
+  .floraAboutBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+    padding-top: 60px;
+  }
+
+  .floraAboutSection .floraSectionTitle {
+    margin-bottom: 0px;
+  }
+
+  .floraAboutTextArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .floraAboutIcon {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .floraAboutText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .floraAboutImageWrapper {
+    flex: 1;
+  }
+
+  .floraAboutImage {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .floraTrendingList {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 24px) / 2);
+  }
+
+  .floraBouquetsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .floraBouquetsSection .floraPrimaryBtn {
+    width: 340px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .floraReviewsList {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 24px) / 2);
+    gap: var(--space-xl);
+  }
+
+  .floraMenuActionButton {
+    display: none;
+  }
+
+  .floraContactsSection .floraContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    align-items: start;
+  }
+
+  .floraContactsConnect {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .floraContactsSection .floraSectionTitle {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .floraContactsSubtitle {
+    grid-column: 1;
+    grid-row: 3;
+    margin-bottom: 0;
+  }
+
+  .floraContactsList {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin-bottom: 0;
+  }
+
+  .floraContactsSection figure {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    margin-top: var(--space-3xl);
+    width: 100%;
+  }
+
+  .floraContactsImage {
+    width: 100%;
+    height: 396px;
+  }
+
+  .floraFooterNavigationList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+  }
+
+  .floraFooterSocials {
+    gap: var(--space-md);
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  body.floraMenuOpen .floraHeaderExploreBtn {
+    display: none;
+  }
+
+  .floraMenuNavigationList {
+    align-items: center;
+  }
+
+}
+
+/* ============================
+   Large Tablet / Pre-Desktop (1380px - 1439px)
+   ============================ */
+
+@media screen and (min-width: 1380px) and (max-width: 1439px) {
+  .floraHeroSection {
+    background-position: right center;
+  }
+}
+
+/* ============================
+   Desktop (1440px+)
+   ============================ */
+
+@media screen and (min-width: 1440px) {
+
+  .floraHeader {
+    padding: var(--space-md) 0;
+  }
+
+  .floraSection {
+    padding: 92px 0;
+  }
+
+  .floraContainer {
+    max-width: 1440px;
+    padding: 0 var(--space-5xl);
+  }
+
+  .floraSectionTitle {
+    font-size: var(--size-h2);
+  }
+
+  .floraHeroSection {
+    padding: 0;
+    background-position: center;
+  }
+
+  .floraHeroSection .floraContainer {
+    gap: var(--space-4xl);
+    padding-top: 110.5px;
+  }
+
+  .floraHeroSection .floraHeroTitle {
+    font-size: 53px;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    max-width: 667px;
+  }
+
+  .floraHeroSection .floraHeroSubtitle {
+    max-width: 667px;
+  }
+
+  .floraHeroSection .floraHeroContent {
+    padding: var(--space-5xl) 0;
+  }
+
+  .floraMenuToggle {
+    display: none;
+  }
+
+  .floraNav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .floraNavList {
+    display: flex;
+    gap: var(--space-2xl);
+    font-size: 16px;
+  }
+
+  .floraHeaderExploreBtn {
+    display: inline-flex;
+    margin-right: 0;
+  }
+
+  .floraHeroSection {
+    min-height: 669px;
+  }
+
+  .floraTrendingSection .floraSectionTitle {
+    font-size: var(--size-h2);
+  }
+
+  .floraTrendingList {
+    grid-auto-columns: calc((100% - 48px) / 3);
+  }
+
+  .floraReviewsList {
+    grid-auto-columns: calc((100% - 48px) / 3);
+  }
+
+  .floraBouquetsList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .floraContactsImage {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+    display: block;
+    border-radius: 32px; /* если по макету */
+}
+
+  .floraFooterSection .floraContainer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .floraFooterLogoLink {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+
+  .floraFooterNavigationList {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .floraFooterSocials {
+    margin-left: 200px;
+    grid-column: 3;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+
+  .floraFooterDivider {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    margin-top: var(--space-5xl);
+  }
+
+  .floraFooterCopyright {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    padding-bottom: var(--space-3xl);
+  }
+
+  .floraContactsSection .floraContainer {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-template-areas:
+      "connect contacts"
+      "title contacts"
+      "subtitle contacts"
+      "image image";
+    column-gap: 80px;
+    row-gap: 24px;
+  }
+
+  .floraContactsConnect {
+    grid-area: connect;
+  }
+
+  .floraContactsSection .floraSectionTitle {
+    grid-area: title;
+    margin-bottom: 0;
+  }
+
+  .floraContactsSubtitle {
+    grid-area: subtitle;
+    margin-bottom: 0;
+  }
+
+  .floraContactsList {
+    grid-area: contacts;
+    margin: 0;
+    align-self: start;
+  }
+
+  .floraContactsSection figure {
+    grid-area: image;
+    margin-top: 48px;
+    width: 100%;
+  }
+
+  .floraContactsImage {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+    display: block;
+    border-radius: 32px;
+  }
+
+  .floraContactsConnect,
+  .floraContactsSection .floraSectionTitle,
+  .floraContactsSubtitle {
+    margin-left: 32px;
+  }
+}

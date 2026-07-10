@@ -1,0 +1,26 @@
+:root {
+  /* Text colors */
+  --primary-text: #030C01;
+  --disabled-text: #D3D3D3;
+  --text-light: #FFFFFF;
+
+  /* Background colors */
+  --primary-bg: #FFFFFF;
+  --secondary-bg: #F8F9F8;
+  --footer-bg: #EEEE60;
+
+  /* Button styles */
+  --primary-button-bg: linear-gradient(90deg, #E8E81C 0%, #42ED13 100%);
+  --primary-button-hover-bg: linear-gradient(90deg, #F3F38D 0%, #A0F689 100%);
+  --primary-button-active-bg: #4A4F46;
+  --primary-button-disabled-bg: linear-gradient(90deg, #FBFBDB 0%, #DDFBD6 100%);
+  --primary-button-text: #030C01;
+
+  /* Border and UI colors */
+  --border-light: #D9D9D9;
+  --border-lighter: #F0F0F0;
+  --border-dark: rgba(3, 12, 1, 0.2);
+
+  /* Interactive states */
+  --button-hover-overlay: rgba(66, 237, 19, 0.3);
+}
